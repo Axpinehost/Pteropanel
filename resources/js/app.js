@@ -1,5 +1,5 @@
 import './bootstrap';
-
+import 'tw-elements';
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
@@ -18,4 +18,4 @@ createInertiaApp({
     },
 });
 
-InertiaProgress.init({ color: '#4B5563' });
+InertiaProgress.init({ color: 'rgba(74, 222, 128)' });

@@ -1,0 +1,114 @@
+/* Login styles */
+
+.login{
+    background-image: url(@assets/images/auth/background.jpg);
+
+    .wrapper{
+        background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, rgba(0,0,0, 5%) 13px ), repeating-linear-gradient( rgba(39, 39, 39, .6), rgba(39, 39, 39, .6) );
+    }
+}
+
+/* Home page styles */
+
+.home-nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.home-header{
+    width: 100%;
+    height: 750px;
+    padding-top: 4rem;
+    border-bottom: 2px solid gray;
+    background-image: url('@assets/images/home/header-block.jpg');
+    background-size: cover;
+}
+
+.home-wrapper{
+    width: 100;
+    height: 100%;
+    padding-top: 125px;
+    background-color: rgba(0,0,0 , 0.6);
+    position: relative;
+}
+
+.home-features{
+    position: absolute;
+    bottom: -100px;
+
+    .feature-container{
+        border: 1px solid gray;
+        height: 250px;
+
+        .feature-wrapper{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0 , 0.3);
+
+            .description{
+                opacity: 0;
+                transition: opacity .25s ease-in-out;
+                -moz-transition: opacity .25s ease-in-out;
+                -webkit-transition: opacity .25s ease-in-out;
+            }
+
+            &:hover{
+                background-color: rgba(74, 222, 128, .5) ;
+                -webkit-transition: background-color 500ms linear;
+                -ms-transition: background-color 500ms linear;
+                transition: background-color 500ms linear;
+
+                .description{
+                    opacity: 1;
+                }
+
+            }
+        }
+    }
+
+    .feature-1{
+        background-image: url('@assets/images/home/feature-1.png');
+    }
+
+    .feature-2{
+        background-image: url('@assets/images/home/feature-2.jpg')
+    }
+
+    .feature-1, .feature-2{
+        background-size: cover;
+        background-position: center, center;
+    }
+
+}
+
+.home-testimonials{
+    background-color: #080808;
+    padding-top: 175px;
+
+    .review{
+        padding: 50px 0px;
+
+        .source{
+            padding: 50px 0px;
+        }
+
+    }
+}
+
+.home-info{
+    height: 400px;
+    background-image: url('@assets/images/home/home-info.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+#scrollTop-btn{
+    color: #ffffff;
+    background-color: rgba(74, 222, 128, .5);
+    position: fixed;
+    right: 25px;
+    bottom: 85px;
+    width: 50px;
+    height: 50px;
+}

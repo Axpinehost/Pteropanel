@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const config = require('./webpack.config')
 
 /*
  |--------------------------------------------------------------------------
@@ -13,13 +14,21 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js').vue()
     .postCss('resources/css/app.css', 'public/css', [
-        require('tailwindcss'),
+        require('tailwindcss/nesting'),
+        require('tailwindcss')
     ])
     .alias({
         '@': 'resources/js',
-        ziggy: "vendor/tightenco/ziggy/dist/vue",
+        ziggy: "vendor/tightenco/ziggy/dist/vue"
     });
+
+mix.webpackConfig(config);
 
 if (mix.inProduction()) {
     mix.version();
 }
+mix.webpackConfig({
+    stats: {
+        children: true,
+    },
+});

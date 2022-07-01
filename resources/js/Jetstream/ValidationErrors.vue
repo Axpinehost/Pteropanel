@@ -7,12 +7,8 @@ const hasErrors = computed(() => Object.keys(errors.value).length > 0);
 </script>
 
 <template>
-    <div v-if="hasErrors">
-        <div class="font-medium text-red-600">
-            Whoops! Something went wrong.
-        </div>
-
-        <ul class="mt-3 list-disc list-inside text-sm text-red-600">
+    <div class="bg-red-500 rounded-lg py-5 px-6 mb-4 text-base text-white mb-3" role="alert" v-if="hasErrors">
+        <ul class="list-disc list-inside text-sm">
             <li v-for="(error, key) in errors" :key="key">
                 {{ error }}
             </li>
