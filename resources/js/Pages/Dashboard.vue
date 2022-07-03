@@ -14,12 +14,12 @@ import Flickity from 'vue-flickity';
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <flickity ref="flickity" :options="flickityOptions">
-                    <div class="carousel-cell bg-red-400 bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-minecraft.png').default})` }">Minecraft Servers</div>
-                    <div class="carousel-cell bg-green-400 bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-rust.jpg').default})` }">Rust Servers</div>
-                    <div class="carousel-cell bg-yellow-400 bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-cs.jpg').default})` }">Counter Strike Servers</div>
-                    <div class="carousel-cell bg-blue-400 bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-dayz.jpg').default})` }">DayZ Servers</div>
-                    <div class="carousel-cell bg-gray-400 bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-ark.jpg').default})` }">ARK Servers</div>
-                    <div class="carousel-cell bg-pink-400 bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-more.jpg').default})` }">And more</div>
+                    <div class="carousel-cell bg-red-400 bg-center bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-minecraft.png').default})` }">Minecraft Servers</div>
+                    <div class="carousel-cell bg-green-400 bg-center bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-rust.jpg').default})` }">Rust Servers</div>
+                    <div class="carousel-cell bg-yellow-400 bg-center bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-cs.jpg').default})` }">Counter Strike Servers</div>
+                    <div class="carousel-cell bg-blue-400 bg-center bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-dayz.jpg').default})` }">DayZ Servers</div>
+                    <div class="carousel-cell bg-gray-400 bg-center bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-ark.jpg').default})` }">ARK Servers</div>
+                    <div class="carousel-cell bg-pink-400 bg-center bg-cover" :style="{ backgroundImage: `url(${require('@assets/images/panel/welcome/header-more.jpg').default})` }">And more</div>
                 </flickity>
                 <div class="grid grid-cols-4 gap-4 my-16 p-4 shadow sm:rounded-tl-md sm:rounded-tr-md bg-theme">
                     <div class="flex flex-col justify-center text-center text-white py-36 bg-green-400 font-bold">Game 01</div>

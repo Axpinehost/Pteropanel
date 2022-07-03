@@ -40,7 +40,7 @@ const logout = () => {
                             <li><Link :href="route('dashboard')" 
                             :class="[route().current('dashboard') ? 'active': '']">Home</Link></li>
                             <li><a href="">My servers</a></li>
-                            <li><a href="">New order</a></li>
+                            <li><a href="">Create new server</a></li>
                         </ul>
                     </li>
                     <li class="nav-label">Support</li>
@@ -65,9 +65,6 @@ const logout = () => {
                             Accounts
                         </a>
                         <ul>
-                            <li><a href="">Tickets</a></li>
-                            <li><a href="">Documentation</a></li>
-                            <li><a href="">Contact</a></li>
                         </ul>
                     </li>
                     <li class="nav-section has-arrow">
