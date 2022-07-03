@@ -58,7 +58,7 @@
 
 I am currently working on this project with @l3lackJack as a Hobby. 
 
-Pterodactyl is awesome for running a game hosting service. Once pterodactyl have an API, i decided to make my own game hosting panel using its endpoints to deploy the game servers.
+Pterodactyl is awesome for running a game hosting service. Once pterodactyl has an API, i decided to make my own game hosting panel using its endpoints to deploy the game servers.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -166,6 +166,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Ismael Semmar  - ismaelsemmar@iesebre.com
+<br />
 Gabriel Urs - gabrielionuturs@iesebre.com
 
 Project Link: [https://github.com/Ism1tha/Pteropanel](https://github.com/Ism1tha/Pteropanel)
