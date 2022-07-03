@@ -1,3 +1,13 @@
+html {
+    width: 100%;
+    height: 100%;
+ }
+ 
+ body, #app {
+    width: 100%;
+    height: 100%;
+ }
+
 /* Login styles */
 
 .login{
@@ -112,3 +122,175 @@
     width: 50px;
     height: 50px;
 }
+
+/* Panel Style */
+
+#panel-layout{
+    height: 100%;
+    min-height: 100%;
+
+    #side-nav{
+        width: 275px;
+        background-color: #080808;
+        height: 100%;
+        position: fixed;
+
+        .header{
+            height: 65px;
+            display: flex;
+            flex-direction: col;
+            align-items: center;
+            justify-content: center;
+            background-color: #1294ff;
+        }
+
+        .menu{
+
+            padding-top: 15px;
+
+            & > ul > li.nav-label{
+                font-weight: bold;
+                color: #1294ff;
+                margin: 10px 30px 0;
+                padding: 1.5625rem 0 10px;
+                text-transform: uppercase;
+                font-size: .75rem;
+                letter-spacing: .05rem;
+
+            }
+
+            & > ul > li.nav-section{
+
+                & > a{
+                }
+
+                & ul{
+                    height: 0px;
+                    overflow: hidden;
+                }
+                    
+                &.open ul{
+                    height: auto;
+                }
+
+                &.has-arrow > a:after{
+                    position: absolute;
+                    content: "";
+                    width: .5em;
+                    height: .5em;
+                    margin: 0px 30px;
+                    border-width: 2px 0 0 2px;
+                    border-style: solid;
+                    border-color: initial;
+                    right: 1em;
+                    -webkit-transform: rotate(-45deg) translateY(-50%);
+                    transform: rotate(-225deg) translateY(-50%);
+                    -webkit-transform-origin: top;
+                    transform-origin: top;
+                    top: 50%;
+                    transition: all .3s ease-out;
+                }
+
+                &.has-arrow.open > a:after{
+                    transform: rotate(-135deg) translateY(-50%);
+                }
+            }
+
+            & > ul > li:not(.first):not(.nav-section){
+                /* border-top: 1px solid #1294ffb2; */
+            }
+
+            & > ul > li > a{
+                color: #ffffff;
+                position: relative;
+                display: block;
+                padding: 0.625rem 1.875rem;
+                outline-width: 0;
+                text-decoration: none;
+            }
+
+            & > ul > li > ul {
+                padding-left: 30px;
+
+                li{
+                    position: relative;
+
+                    a {
+                        display: block;
+                        color: #ffffff;
+                        padding: 0.3rem 1.875rem;
+                        transition: color .25s ease-in-out;
+                        -moz-transition: color .25s ease-in-out;
+                        -webkit-transition: color .25s ease-in-out;
+
+                        &:hover{
+                            color: #cccccc;
+                        }
+
+                        &.active{
+                            color: #ffffff;
+                            font-weight: bold;
+                        }
+                    }
+
+                    a:before{
+                        content: "";
+                        position: absolute;
+                        width: 3px;
+                        height: 3px;
+                        background: #ffffff;
+                        position: absolute;
+                        left: 15px;
+                        top: 17px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            & > ul > ul li a{
+                position: relative;
+                display: block;
+                padding: 0.625rem 1.875rem;
+                outline-width: 0;
+                color: #89879f;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .header-nav{
+        margin-left: 275px;
+        width: calc(100% - 275px);
+        position: fixed;
+        z-index: 1;
+    }
+
+    .page-content{
+        margin-left: 275px;
+        width: calc(100% - 275px);
+        padding-top: 75px;
+    }
+
+}
+
+/* Flickity carousel */
+
+.carousel-cell {
+    width: 100%; /* full width */
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .carousel.is-fullscreen .carousel-cell {
+    height: 100%;
+  }
+  
+  .carousel-cell img {
+    display: block;
+    max-height: 100%;
+  }
+

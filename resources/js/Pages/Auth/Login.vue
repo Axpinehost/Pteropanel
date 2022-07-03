@@ -68,18 +68,18 @@ const submit = () => {
                         >
                         Log in
                         </button>
-                        <a class="text-gray-500" v-if="canResetPassword" :href="route('password.request')">Forgot password?</a>
+                        <Link class="text-gray-500" v-if="canResetPassword" :href="route('password.request')">Forgot password?</Link>
                     </div>
                     <div class="flex items-center justify-between pb-6">
                         <p class="mb-0 mr-2">Don't have an account?</p>
-                            <a :href="route('register')">
+                            <Link :href="route('register')">
                                 <button
                                 type="button"
                                 class="inline-block px-6 py-2 border-2 border-theme text-theme font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
                                 >
                                 Sign up!
                                 </button>
-                            </a>
+                            </Link>
                     </div>
                     </form>
                 </div>

@@ -27,6 +27,7 @@
         "vue-loader": "^17.0.0"
     },
     "dependencies": {
-        "tw-elements": "^1.0.0-alpha12"
+        "tw-elements": "^1.0.0-alpha12",
+        "vue-flickity": "^1.2.1"
     }
 }

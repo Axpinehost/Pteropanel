@@ -35,12 +35,12 @@ defineProps({
                         <a href="#" class="block py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Voice servers</a>
                     </li>
                     <li>
-                        <a :href="route('login')" class="inline-block px-8 py-2 pr-4 pl-3 bg-green-500 hover:bg-green-700 rounded-full text-white ">
+                        <Link :href="route('login')" class="inline-block px-8 py-2 pr-4 pl-3 bg-green-500 hover:bg-green-700 rounded-full text-white ">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                             </svg>
                             Panel login
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 </div>
