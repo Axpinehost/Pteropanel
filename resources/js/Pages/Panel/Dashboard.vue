@@ -1,7 +1,6 @@
 <script setup>
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
-import Welcome from '@/Jetstream/Welcome.vue';
 import HeaderSlider from '@/Components/Panel/Dashboard/HeaderSlider.vue';
 import GamesGrid from '@/Components/Panel/Dashboard/GamesGrid.vue';
 </script>
