@@ -34,6 +34,7 @@ import { Link } from '@inertiajs/inertia-vue3';
                         <li><Link :href="route('myTickets')" 
                         :class="[route().current('myTickets') ? 'active': '']">My tickets</Link></li>
                         <li><a href="">Closed tickets</a></li>
+                        <li><a href="">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="nav-label">Administration</li>

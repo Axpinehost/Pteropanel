@@ -6,8 +6,8 @@ import GamesGrid from '@/Components/Panel/Dashboard/GamesGrid.vue';
 </script>
 
 <template>
-    <AppLayout title="Dashboard" :breadcrumbData="breadcrumbData">
-        <Head title="Dashboard" />
+    <Head title="Dashboard" />
+    <AppLayout :breadcrumbData="breadcrumbData">
         <template #header>
             Dashboard
         </template>

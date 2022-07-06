@@ -33,6 +33,9 @@ Route::middleware([
         return Inertia::render('Panel/Dashboard');
     })->name('dashboard');
     Route::get('/tickets', function () {
-        return Inertia::render('Panel/Tickets/MyTickets');
+        return Inertia::render('Panel/MyTickets');
     })->name('myTickets');
+    Route::get('/tickets/new', function () {
+        return Inertia::render('Panel/Tickets/NewTicket');
+    })->name('newTicket');
 });
