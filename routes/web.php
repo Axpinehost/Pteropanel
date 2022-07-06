@@ -30,6 +30,9 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
+        return Inertia::render('Panel/Dashboard');
     })->name('dashboard');
+    Route::get('/tickets', function () {
+        return Inertia::render('Panel/Tickets/MyTickets');
+    })->name('myTickets');
 });
