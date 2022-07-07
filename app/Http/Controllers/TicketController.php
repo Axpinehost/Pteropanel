@@ -26,7 +26,9 @@ class TicketController extends Controller
     }
 
     public function showTicket($id , Request $request){
+
         $ticket = Ticket::where('id', $id)->get()->first();
+        if($ticket->author_id != $request->user()->id) return Inertia::render('Panel/Dashboard');
         return Inertia::render('Panel/Tickets/Ticket')->with('ticket', $ticket); 
     }
 }
