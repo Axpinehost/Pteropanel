@@ -112,7 +112,6 @@ export default {
       editor: ClassicEditor,
       editorData: '',
       editorConfig: {
-        height: 300,
         toolbar: {
             removeItems: [ 'heading', 'link', 'insertTable', 'mediaEmbed', 'blockQuote', 'uploadImage', 'indent', 'outdent', 'bulletedList', 'numberedList',]
         }
