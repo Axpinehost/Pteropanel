@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\TicketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,10 +33,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Panel/Dashboard');
     })->name('dashboard');
-    Route::get('/tickets', function () {
-        return Inertia::render('Panel/MyTickets');
-    })->name('myTickets');
+    Route::get('/tickets', [TicketController::class, 'index'])->name('myTickets');
+    Route::get('/ticket/{id}', [TicketController::class, 'showTicket']);
     Route::get('/tickets/new', function () {
         return Inertia::render('Panel/Tickets/NewTicket');
-    })->name('newTicket');
+    })->name('tickets.newTicket');
+    Route::put('/tickets/new/send', [TicketController::class, 'store'])->name('tickets.newTicket.send');
 });

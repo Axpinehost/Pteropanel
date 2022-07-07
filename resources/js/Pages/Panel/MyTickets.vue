@@ -19,51 +19,8 @@ import AppLayout from '@/Layouts/AppLayout.vue';
                         If you are looking for <b>Pteropanel</b> customer service, we provide a quick way to resolve your issue, please check our links below:
                     </p>
                 </div>
-                <div class="grid grid-cols-2 gap-8">
-                    <div class="">
-                        <div class="flex flex-col">
-                            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                <div class="pb-4 inline-block min-w-full sm:px-6 lg:px-8">
-                                <div class="overflow-hidden">
-                                    <table class="min-w-full text-center">
-                                    <thead class="border-b bg-theme-dark">
-                                        <tr>
-                                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                            #
-                                        </th>
-                                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                            Title
-                                        </th>
-                                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                            Last update
-                                        </th>
-                                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                                            Status
-                                        </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="bg-white border-b">
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            Server not working
-                                        </td>
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            Me
-                                        </td>
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <div class="w-2 h-2 mr-3 bg-green-500 rounded-full inline-block"></div> Open
-                                        </td>
-                                        </tr>
-                                    </tbody>
-                                    </table>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                    </div>
                     <div>
-                        <Link :href="route('newTicket')">
+                        <Link :href="route('tickets.newTicket')">
                             <div class="bg-theme-dark hover:bg-gray-700 mb-4 p-4 w-100 text-white rounded">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
@@ -84,7 +41,57 @@ import AppLayout from '@/Layouts/AppLayout.vue';
                             Frequently asked questions (FAQ)
                         </div>
                     </div>
-                </div>
+                    <div class="">
+                        <div class="flex flex-col">
+                            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="pb-4 inline-block min-w-full sm:px-6 lg:px-8">
+                                <div class="overflow-hidden">
+                                    <table class="min-w-full text-center">
+                                    <thead class="border-b bg-theme">
+                                        <tr>
+                                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                            #
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                            Title
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                            Last update
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
+                                            Status
+                                        </th>
+                                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="item in $page.props.tickets" class="border-b">
+                                          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ item.id }}</td>
+                                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                {{ item.title }}
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                {{ item.updated_at }}
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                                <div class="w-2 h-2 mr-3 bg-green-500 rounded-full inline-block"></div> Open
+                                            </td>
+                                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap text-center">
+                                                <Link :href="'/ticket/' + item.id">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                                    </svg>
+                                                </Link>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
             </div>
         </div>
     </AppLayout>

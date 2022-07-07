@@ -1,6 +1,7 @@
 import './bootstrap';
 import 'tw-elements';
 import 'vue-flickity';
+import CKEditor from '@ckeditor/ckeditor5-vue';
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
@@ -15,6 +16,7 @@ createInertiaApp({
         return createApp({ render: () => h(app, props) })
             .use(plugin)
             .use(ZiggyVue, Ziggy)
+            .use(CKEditor)
             .mount(el);
     },
 });

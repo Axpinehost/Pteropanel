@@ -27,6 +27,8 @@
         "vue-loader": "^17.0.0"
     },
     "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^34.2.0",
+        "@ckeditor/ckeditor5-vue": "^4.0.1",
         "tw-elements": "^1.0.0-alpha12",
         "vue-flickity": "^1.2.1"
     }
