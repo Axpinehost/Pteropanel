@@ -78,7 +78,6 @@ export default {
     components: {
   },
   created() {
-    window.addEventListener('scroll', this.handleScroll);
   },
   mounted() {
     /* Sidenav */
